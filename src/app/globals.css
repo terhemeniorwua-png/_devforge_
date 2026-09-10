@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-obsidian: #050507;
+  --color-panel: #0f0f12;
+  --color-panel-2: #15151a;
+  --color-line: #23232b;
+  --color-crimson: #e11d48;
+  --color-ember: #f43f5e;
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), "JetBrains Mono", ui-monospace,
+    "SF Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #050507;
+  color: #e5e7eb;
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(225, 29, 72, 0.35);
+  color: #fff;
+}
+
+/* Slim custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0b0f;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#e11d48, #881337);
+  border-radius: 999px;
+  border: 2px solid #0b0b0f;
+}
+
+/* Ambient radial backlight blobs */
+.radial-red {
+  background: radial-gradient(
+    closest-side,
+    rgba(225, 29, 72, 0.22),
+    rgba(225, 29, 72, 0.06) 55%,
+    transparent 100%
+  );
+}
+.radial-crimson {
+  background: radial-gradient(
+    closest-side,
+    rgba(244, 63, 94, 0.18),
+    rgba(136, 19, 55, 0.05) 60%,
+    transparent 100%
+  );
+}
+
+/* Dev-grid backdrop */
+.grid-lines {
+  background-image: linear-gradient(
+      rgba(225, 29, 72, 0.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(225, 29, 72, 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 75%);
+}
+
+/* Glowing text */
+.text-glow-red {
+  text-shadow: 0 0 24px rgba(225, 29, 72, 0.55),
+    0 0 80px rgba(225, 29, 72, 0.3);
+}
+
+/* Animated shimmer for CTA borders */
+.shimmer-border {
+  position: relative;
+}
+.shimmer-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(
+    from var(--shimmer-angle, 0deg),
+    transparent 0%,
+    rgba(225, 29, 72, 0.9) 12%,
+    transparent 24%
+  );
+  animation: shimmer-spin 3.5s linear infinite;
+}
+@property --shimmer-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes shimmer-spin {
+  to {
+    --shimmer-angle: 360deg;
+  }
+}
+
+/* Soft pulse for live dots / badges */
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 18px rgba(225, 29, 72, 0.45);
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 34px rgba(225, 29, 72, 0.85);
+    opacity: 0.85;
+  }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2.4s ease-in-out infinite;
+}
+
+/* Floating for hero window */
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+.animate-float {
+  animation: float-y 9s ease-in-out infinite;
+}
+
+@keyframes caret-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+.animate-caret {
+  animation: caret-blink 1.1s step-end infinite;
+}
