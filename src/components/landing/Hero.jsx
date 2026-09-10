@@ -110,14 +110,9 @@ export default function Hero() {
       <div className="pointer-events-none absolute -top-40 left-1/2 h-[480px] w-[820px] -translate-x-1/2 rounded-full radial-red blur-3xl" />
       <div className="pointer-events-none absolute -bottom-48 -right-32 h-[420px] w-[420px] rounded-full radial-crimson blur-3xl" />
 
-      <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-4 sm:px-6 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:px-8">
+      <div className="relative mx-auto grid max-w-7xl items-start gap-16 px-4 sm:px-6 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:px-8">
         <div className="flex flex-col items-start">
-          <Reveal delay={80}>
-            <span className="inline-flex items-center gap-2 rounded-full border border-rose-500/30 bg-rose-500/10 px-3.5 py-1.5 font-mono text-xs font-semibold uppercase tracking-widest text-rose-400 shadow-[0_0_18px_rgba(225,29,72,0.15)]">
-              <Sparkles size={13} />
-              In-browser engineering bootcamp
-            </span>
-          </Reveal>
+        
 
           <Reveal delay={160}>
             <h1 className="mt-5 max-w-2xl text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
@@ -140,31 +135,31 @@ export default function Hero() {
             </p>
           </Reveal>
 
-          <Reveal delay={320} className="mt-9 flex flex-wrap items-center gap-4">
+          <Reveal delay={320} className="mt-9 flex w-full flex-wrap items-center justify-between gap-3">
             <Link
               href="/catalog"
-              className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-6 py-3.5 text-base font-semibold text-white shadow-[0_0_30px_rgba(225,29,72,0.45)] transition-all hover:shadow-[0_0_50px_rgba(225,29,72,0.75)] hover:brightness-110"
+              className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-6 py-3.5 text-base font-semibold text-white shadow-[0_0_30px_rgba(225,29,72,0.45)] transition-all hover:shadow-[0_0_50px_rgba(225,29,72,0.75)] hover:brightness-110"
             >
               Explore Courses
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </Link>
             <Link
               href="/vault"
-              className="group inline-flex items-center gap-2 rounded-xl border border-rose-500/40 bg-rose-500/5 px-6 py-3.5 text-base font-semibold text-rose-300 transition-all hover:border-rose-400/70 hover:bg-rose-500/10 hover:shadow-[0_0_28px_rgba(225,29,72,0.35)]"
+              className="group inline-flex items-center justify-center gap-2 rounded-xl border border-rose-500/40 bg-rose-500/5 px-6 py-3.5 text-base font-semibold text-rose-300 transition-all hover:border-rose-400/70 hover:bg-rose-500/10 hover:shadow-[0_0_28px_rgba(225,29,72,0.35)]"
             >
               <Play size={17} className="transition-transform group-hover:scale-110" />
               Try Live Sandbox
             </Link>
             <Link
               href="/onboarding"
-              className="group inline-flex items-center gap-2 rounded-xl border border-amber-500/40 bg-amber-500/5 px-6 py-3.5 text-base font-semibold text-amber-300 transition-all hover:border-amber-400/70 hover:bg-amber-500/10 hover:shadow-[0_0_28px_rgba(245,158,11,0.35)]"
+              className="group inline-flex items-center justify-center gap-2 rounded-xl border border-amber-500/40 bg-amber-500/5 px-6 py-3.5 text-base font-semibold text-amber-300 transition-all hover:border-amber-400/70 hover:bg-amber-500/10 hover:shadow-[0_0_28px_rgba(245,158,11,0.35)]"
             >
               Get 1-on-1 Guidance
               <ArrowRight size={17} className="transition-transform group-hover:translate-x-1" />
             </Link>
           </Reveal>
 
-          <Reveal delay={420} className="mt-10 flex w-full max-w-xl flex-wrap items-center gap-x-8 gap-y-4 border-t border-line pt-6">
+          <Reveal delay={420} className="mt-10 flex w-full max-w-xl flex-wrap items-center justify-between gap-x-8 gap-y-4 border-t border-line pt-6">
             {HERO_STATS.map((stat) => (
               <div key={stat.label} className="flex items-center gap-3">
                 <span className="font-mono text-2xl font-bold text-white">
