@@ -40,7 +40,7 @@ function Toast({ toast }) {
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: 12, scale: 0.96 }}
         transition={{ duration: 0.25 }}
-        className="fixed bottom-6 right-6 z-[80] max-w-sm border border-rose-500/40 bg-panel/95 p-4 shadow-[0_0_30px_rgba(225,29,72,0.3)] backdrop-blur"
+        className="fixed bottom-6 right-6 z-[80] max-w-sm border border-rose-500/40 bg-panel/95 p-4 shadow-[0_0_30px_rgba(255,255,255,0.3)] backdrop-blur"
         data-shift-toast="ticket"
       >
         <div className="flex items-start gap-3">
@@ -86,7 +86,7 @@ function CourseRow({ course, index }) {
       </div>
       <div className="mt-4 h-2 overflow-hidden rounded-full bg-white/5">
         <div
-          className="h-full rounded-full bg-gradient-to-r from-red-500 via-rose-600 to-red-800 shadow-[0_0_12px_rgba(225,29,72,0.5)]"
+          className="h-full rounded-full bg-gradient-to-r from-red-500 via-rose-600 to-red-800 shadow-[0_0_12px_rgba(255,255,255,0.5)]"
           style={{ width: `${course.progress}%` }}
         />
       </div>
@@ -140,7 +140,7 @@ export default function Dashboard() {
       <div className="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-5 lg:flex-row lg:items-center">
           <div className="flex items-center gap-4">
-            <span className="relative grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-red-500 via-rose-600 to-red-900 font-mono text-xl font-extrabold text-white shadow-[0_0_28px_rgba(225,29,72,0.55)]">
+            <span className="relative grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-red-500 via-rose-600 to-red-900 font-mono text-xl font-extrabold text-obsidian shadow-[0_0_28px_rgba(255,255,255,0.55)]">
               {user.avatarFallback || initials}
               <span className="absolute -bottom-1 -right-1 grid h-6 w-6 place-items-center rounded-full border border-line bg-panel">
                 <Sparkles size={11} className="text-rose-400" />
@@ -152,7 +152,7 @@ export default function Dashboard() {
                 {user.email}
               </p>
               <div className="mt-2 flex flex-wrap items-center gap-2">
-                <span className="rounded-full bg-rose-500/10 px-3 py-1 font-mono text-[11px] font-bold uppercase tracking-widest text-rose-400 ring-1 ring-rose-500/30 shadow-[0_0_14px_rgba(225,29,72,0.2)]">
+                <span className="rounded-full bg-rose-500/10 px-3 py-1 font-mono text-[11px] font-bold uppercase tracking-widest text-rose-400 ring-1 ring-rose-500/30 shadow-[0_0_14px_rgba(255,255,255,0.2)]">
                   {rank}
                 </span>
                 {user.isPaid && (
@@ -180,7 +180,7 @@ export default function Dashboard() {
             type="button"
             data-shift-help-open
             onClick={() => setHelpOpen(true)}
-            className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-5 py-3 text-sm font-bold text-white shadow-[0_0_20px_rgba(225,29,72,0.4)] transition-all hover:shadow-[0_0_32px_rgba(225,29,72,0.65)] hover:brightness-110"
+            className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-5 py-3 text-sm font-bold text-obsidian shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all hover:shadow-[0_0_32px_rgba(255,255,255,0.65)] hover:brightness-110"
           >
             <LifeBuoy size={16} className="transition-transform group-hover:scale-110" />
             Request Instructor Assistance

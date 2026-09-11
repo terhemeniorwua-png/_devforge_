@@ -57,7 +57,7 @@ export default function Footer() {
   const whatsappLink = buildWhatsappLink(settings.whatsappNumber);
 
   return (
-    <footer className="relative mt-auto overflow-hidden border-t border-line bg-[#07070a]">
+    <footer className="relative mt-auto overflow-hidden border-t border-line bg-[#060b1c]">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-red-500/50 to-transparent" />
       <div className="pointer-events-none absolute -top-40 left-1/2 h-80 w-[560px] -translate-x-1/2 rounded-full radial-crimson blur-2xl" />
 
@@ -65,7 +65,7 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_2fr]">
           <div>
             <Link href="/" className="flex items-center gap-2.5">
-              <span className="relative grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-red-500 via-rose-600 to-red-900 shadow-[0_0_24px_rgba(225,29,72,0.5)]">
+              <span className="relative grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-red-500 via-rose-600 to-red-900 shadow-[0_0_24px_rgba(255,255,255,0.5)]">
                 <span className="font-mono text-lg font-extrabold text-white">D</span>
               </span>
               <span className="font-mono text-xl font-bold tracking-tight text-white">
@@ -99,11 +99,11 @@ export default function Footer() {
                   type="email"
                   required
                   placeholder="you@devforge.dev"
-                  className="w-full rounded-lg border border-line bg-panel px-3.5 py-2.5 text-sm text-white placeholder-zinc-500 outline-none transition-colors focus:border-rose-500/60 focus:shadow-[0_0_0_3px_rgba(225,29,72,0.15)]"
+                  className="w-full rounded-lg border border-line bg-panel px-3.5 py-2.5 text-sm text-white placeholder-zinc-500 outline-none transition-colors focus:border-rose-500/60 focus:shadow-[0_0_0_3px_rgba(255,255,255,0.15)]"
                 />
                 <button
                   type="submit"
-                  className="group inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-gradient-to-r from-red-500 to-rose-700 px-4 py-2.5 text-sm font-semibold text-white shadow-[0_0_18px_rgba(225,29,72,0.35)] transition-all hover:shadow-[0_0_28px_rgba(225,29,72,0.6)]"
+                  className="group inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-gradient-to-r from-red-500 to-rose-700 px-4 py-2.5 text-sm font-semibold text-obsidian shadow-[0_0_18px_rgba(255,255,255,0.35)] transition-all hover:shadow-[0_0_28px_rgba(255,255,255,0.6)]"
                 >
                   Join
                   <ArrowRight size={15} className="transition-transform group-hover:translate-x-0.5" />

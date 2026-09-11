@@ -45,14 +45,14 @@ export default function StartLearningTabs() {
                 onClick={() => setTab(item.key)}
                 aria-pressed={active}
                 className={`relative flex shrink-0 items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors ${
-                  active ? "text-white" : "text-zinc-400 hover:text-white"
+                  active ? "text-obsidian" : "text-zinc-400 hover:text-white"
                 }`}
               >
                 {active && (
                   <motion.span
                     layoutId="start-learning-tab-pill"
                     transition={{ type: "spring", stiffness: 420, damping: 34 }}
-                    className="absolute inset-0 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 shadow-[0_0_20px_rgba(225,29,72,0.45)]"
+                    className="absolute inset-0 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 shadow-[0_0_20px_rgba(255,255,255,0.45)]"
                   />
                 )}
                 <Icon size={15} className="relative z-10" />

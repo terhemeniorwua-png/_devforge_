@@ -5,7 +5,7 @@ import { scorePassword } from "@/lib/auth";
 
 const LEVELS = [
   { score: 0, label: "Too short", color: "#71717a" },
-  { score: 1, label: "Weak", color: "#f43f5e" },
+  { score: 1, label: "Weak", color: "#ffffff" },
   { score: 2, label: "Fair", color: "#fb923c" },
   { score: 3, label: "Good", color: "#a3e635" },
   { score: 4, label: "Strong", color: "#34d399" },

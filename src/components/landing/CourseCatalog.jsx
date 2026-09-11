@@ -128,7 +128,7 @@ const COURSES = [
 function CourseCard({ course, index }) {
   return (
     <Reveal delay={index * 90}>
-      <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-panel transition-all duration-300 hover:border-rose-500/50 hover:shadow-[0_0_0_1px_rgba(225,29,72,0.3),0_0_38px_rgba(225,29,72,0.25)] hover:-translate-y-1.5">
+      <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-panel transition-all duration-300 hover:border-rose-500/50 hover:shadow-[0_0_0_1px_rgba(255,255,255,0.3),0_0_38px_rgba(255,255,255,0.25)] hover:-translate-y-1.5">
         <div className="relative overflow-hidden">
           <video
             src={course.video}
@@ -141,14 +141,14 @@ function CourseCard({ course, index }) {
             className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-panel via-transparent to-transparent" />
-          <div className="absolute left-3 top-3 flex items-center gap-1.5 rounded-full border border-rose-500/40 bg-[#0b0b0f]/85 px-2.5 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-rose-400 backdrop-blur-sm">
+          <div className="absolute left-3 top-3 flex items-center gap-1.5 rounded-full border border-rose-500/40 bg-[#0a1122]/85 px-2.5 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-rose-400 backdrop-blur-sm">
             <Play size={10} className="fill-rose-400" />
             Free Preview Available
           </div>
-          <span className="absolute bottom-3 right-3 rounded-full bg-[#0b0b0f]/85 px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-widest text-emerald-400 ring-1 ring-emerald-500/30 backdrop-blur-sm">
+          <span className="absolute bottom-3 right-3 rounded-full bg-[#0a1122]/85 px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-widest text-emerald-400 ring-1 ring-emerald-500/30 backdrop-blur-sm">
             {course.ecosystem === "web3" ? "Web3" : "Web2"}
           </span>
-          <div className="absolute bottom-3 left-3 flex items-center gap-1 rounded-full bg-[#0b0b0f]/70 px-2 py-0.5 font-mono text-[10px] text-zinc-300 opacity-0 transition-opacity duration-300 group-hover:opacity-100 backdrop-blur-sm">
+          <div className="absolute bottom-3 left-3 flex items-center gap-1 rounded-full bg-[#0a1122]/70 px-2 py-0.5 font-mono text-[10px] text-zinc-300 opacity-0 transition-opacity duration-300 group-hover:opacity-100 backdrop-blur-sm">
             <Play size={10} />
             Previewing live
           </div>
@@ -246,7 +246,7 @@ export default function CourseCatalog() {
                 onClick={() => setTrack(tab.key)}
                 className={`rounded-xl px-4 py-2.5 text-sm font-semibold transition-all ${
                   track === tab.key
-                    ? "bg-gradient-to-r from-red-500 via-rose-600 to-red-800 text-white shadow-[0_0_20px_rgba(225,29,72,0.45)]"
+                    ? "bg-gradient-to-r from-red-500 via-rose-600 to-red-800 text-obsidian shadow-[0_0_20px_rgba(255,255,255,0.45)]"
                     : "text-zinc-400 hover:bg-white/5 hover:text-white"
                 }`}
               >
@@ -267,7 +267,7 @@ export default function CourseCatalog() {
                   onClick={() => setEcosystem(eco.key)}
                   className={`rounded-xl px-4 py-2 text-sm font-semibold transition-all ${
                     ecosystem === eco.key
-                      ? "bg-white/10 text-white ring-1 ring-rose-500/50 shadow-[0_0_16px_rgba(225,29,72,0.3)]"
+                      ? "bg-white/10 text-white ring-1 ring-rose-500/50 shadow-[0_0_16px_rgba(255,255,255,0.3)]"
                       : "text-zinc-400 hover:bg-white/5 hover:text-white"
                   }`}
                 >
@@ -298,7 +298,7 @@ export default function CourseCatalog() {
                 setTrack("all");
                 setEcosystem("all");
               }}
-              className="mt-1 rounded-lg bg-gradient-to-r from-red-500 to-rose-700 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_0_18px_rgba(225,29,72,0.4)]"
+              className="mt-1 rounded-lg bg-gradient-to-r from-red-500 to-rose-700 px-5 py-2.5 text-sm font-semibold text-obsidian shadow-[0_0_18px_rgba(255,255,255,0.4)]"
             >
               Reset filters
             </button>

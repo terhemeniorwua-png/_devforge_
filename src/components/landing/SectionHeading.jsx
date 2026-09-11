@@ -11,7 +11,7 @@ export default function SectionHeading({
 
   return (
     <Reveal className={`flex flex-col ${alignClasses}`}>
-      <span className="inline-flex items-center gap-2 rounded-full border border-rose-500/30 bg-rose-500/10 px-3.5 py-1.5 font-mono text-xs font-semibold uppercase tracking-widest text-rose-400 shadow-[0_0_18px_rgba(225,29,72,0.15)]">
+      <span className="inline-flex items-center gap-2 rounded-full border border-rose-500/30 bg-rose-500/10 px-3.5 py-1.5 font-mono text-xs font-semibold uppercase tracking-widest text-rose-400 shadow-[0_0_18px_rgba(255,255,255,0.15)]">
         <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-red-500 to-rose-600 animate-pulse-glow" />
         {eyebrow}
       </span>

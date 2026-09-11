@@ -20,8 +20,8 @@ function MacEditorWindow() {
   return (
     <div className="relative">
       <div className="absolute -inset-6 -z-10 rounded-[2rem] radial-crimson blur-2xl" />
-      <div className="overflow-hidden rounded-2xl border border-line bg-panel shadow-[0_0_60px_rgba(225,29,72,0.25)]">
-        <div className="flex items-center gap-3 border-b border-line bg-[#0d0d11] px-4 py-3">
+      <div className="overflow-hidden rounded-2xl border border-line bg-panel shadow-[0_0_60px_rgba(255,255,255,0.25)]">
+        <div className="flex items-center gap-3 border-b border-line bg-[#0f172b] px-4 py-3">
           <div className="flex gap-2">
             <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
             <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
@@ -48,14 +48,14 @@ function MacEditorWindow() {
             preload="metadata"
             className="aspect-video w-full object-cover"
           />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050507]/70 via-transparent to-transparent" />
-          <div className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 rounded-lg border border-rose-500/30 bg-[#0b0b0f]/80 px-3 py-2 font-mono text-xs text-zinc-300 shadow-[0_0_18px_rgba(225,29,72,0.25)] backdrop-blur-sm">
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#060b1c]/70 via-transparent to-transparent" />
+          <div className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 rounded-lg border border-rose-500/30 bg-[#0a1122]/80 px-3 py-2 font-mono text-xs text-zinc-300 shadow-[0_0_18px_rgba(255,255,255,0.25)] backdrop-blur-sm">
             <span className="text-rose-400">$</span> forge run track --web3
             <span className="ml-1 inline-block h-3.5 w-2 translate-y-0.5 bg-rose-400 animate-caret" />
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-2 border-t border-line bg-[#0d0d11] px-4 py-3 font-mono text-[11px] text-zinc-500">
+        <div className="flex flex-wrap items-center justify-between gap-2 border-t border-line bg-[#0f172b] px-4 py-3 font-mono text-[11px] text-zinc-500">
           <span className="inline-flex items-center gap-1.5">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
             42 passing · 0 failing
@@ -138,14 +138,14 @@ export default function Hero() {
           <Reveal delay={320} className="mt-9 flex w-full flex-wrap items-center justify-between gap-3">
             <Link
               href="/catalog"
-              className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-6 py-3.5 text-base font-semibold text-white shadow-[0_0_30px_rgba(225,29,72,0.45)] transition-all hover:shadow-[0_0_50px_rgba(225,29,72,0.75)] hover:brightness-110"
+              className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-6 py-3.5 text-base font-semibold text-obsidian shadow-[0_0_30px_rgba(255,255,255,0.45)] transition-all hover:shadow-[0_0_50px_rgba(255,255,255,0.75)] hover:brightness-110"
             >
               Explore Courses
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </Link>
             <Link
               href="/vault"
-              className="group inline-flex items-center justify-center gap-2 rounded-xl border border-rose-500/40 bg-rose-500/5 px-6 py-3.5 text-base font-semibold text-rose-300 transition-all hover:border-rose-400/70 hover:bg-rose-500/10 hover:shadow-[0_0_28px_rgba(225,29,72,0.35)]"
+              className="group inline-flex items-center justify-center gap-2 rounded-xl border border-rose-500/40 bg-rose-500/5 px-6 py-3.5 text-base font-semibold text-rose-300 transition-all hover:border-rose-400/70 hover:bg-rose-500/10 hover:shadow-[0_0_28px_rgba(255,255,255,0.35)]"
             >
               <Play size={17} className="transition-transform group-hover:scale-110" />
               Try Live Sandbox

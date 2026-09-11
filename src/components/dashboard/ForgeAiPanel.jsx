@@ -50,7 +50,7 @@ function writeChat(chats) {
 function MessageBlock({ chunk, partial }) {
   if (chunk.type === "code") {
     return (
-      <div className="mt-2 overflow-hidden rounded-xl border border-line bg-[#0b0b0f]">
+      <div className="mt-2 overflow-hidden rounded-xl border border-line bg-[#0a1122]">
         <div className="flex items-center gap-1.5 border-b border-line bg-white/[0.03] px-3 py-1.5">
           <span className="h-2 w-2 rounded-full bg-[#ff5f57]" />
           <span className="h-2 w-2 rounded-full bg-[#febc2e]" />
@@ -84,7 +84,7 @@ function MessageRow({ message, typing }) {
       <div
         className={`max-w-[85%] rounded-2xl px-4 py-3 ${
           message.role === "user"
-            ? "rounded-br-sm bg-gradient-to-r from-red-600 to-rose-700 text-white shadow-[0_0_16px_rgba(225,29,72,0.3)]"
+            ? "rounded-br-sm bg-gradient-to-r from-red-600 to-rose-700 text-obsidian shadow-[0_0_16px_rgba(255,255,255,0.3)]"
             : "border border-line bg-panel/80 text-left"
         }`}
       >
@@ -188,12 +188,12 @@ export default function ForgeAiPanel() {
 
   return (
     <section
-      className="overflow-hidden rounded-3xl border border-line bg-panel/70 shadow-[0_0_40px_rgba(225,29,72,0.1)] backdrop-blur"
+      className="overflow-hidden rounded-3xl border border-line bg-panel/70 shadow-[0_0_40px_rgba(255,255,255,0.1)] backdrop-blur"
       data-shift-forgeai="panel"
     >
-      <div className="flex items-center justify-between border-b border-line bg-[#0c0c10] px-4 py-3">
+      <div className="flex items-center justify-between border-b border-line bg-[#0e1629] px-4 py-3">
         <div className="flex items-center gap-2.5">
-          <span className="relative grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-red-500 via-rose-600 to-red-900 shadow-[0_0_16px_rgba(225,29,72,0.5)]">
+          <span className="relative grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-red-500 via-rose-600 to-red-900 shadow-[0_0_16px_rgba(255,255,255,0.5)]">
             <Sparkles size={15} className="text-white" />
             <span className="absolute -right-0.5 -top-0.5 h-2 w-2 rounded-full bg-emerald-400 animate-pulse-glow" />
           </span>
@@ -255,13 +255,13 @@ export default function ForgeAiPanel() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Ask ForgeAI a question…"
-            className="w-full rounded-xl border border-line bg-[#0b0b0f] px-3.5 py-2.5 font-mono text-[13px] text-white placeholder-zinc-600 outline-none transition-colors focus:border-rose-500/60 focus:shadow-[0_0_0_3px_rgba(225,29,72,0.15)]"
+            className="w-full rounded-xl border border-line bg-[#0a1122] px-3.5 py-2.5 font-mono text-[13px] text-white placeholder-zinc-600 outline-none transition-colors focus:border-rose-500/60 focus:shadow-[0_0_0_3px_rgba(255,255,255,0.15)]"
           />
           <button
             type="submit"
             data-shift-ai-send
             disabled={busy || !input.trim()}
-            className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 text-white shadow-[0_0_16px_rgba(225,29,72,0.4)] transition-all hover:shadow-[0_0_26px_rgba(225,29,72,0.65)] disabled:cursor-wait disabled:opacity-50"
+            className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 text-obsidian shadow-[0_0_16px_rgba(255,255,255,0.4)] transition-all hover:shadow-[0_0_26px_rgba(255,255,255,0.65)] disabled:cursor-wait disabled:opacity-50"
           >
             <Send size={15} />
           </button>

@@ -30,7 +30,7 @@ export default function CtaBanner() {
               <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
                 <Link
                   href="/catalog"
-                  className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-7 py-3.5 text-base font-semibold text-white shadow-[0_0_34px_rgba(225,29,72,0.55)] transition-all hover:shadow-[0_0_54px_rgba(225,29,72,0.85)] hover:brightness-110"
+                  className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-7 py-3.5 text-base font-semibold text-obsidian shadow-[0_0_34px_rgba(255,255,255,0.55)] transition-all hover:shadow-[0_0_54px_rgba(255,255,255,0.85)] hover:brightness-110"
                 >
                   Start Learning Free
                   <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />

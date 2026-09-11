@@ -159,7 +159,7 @@ export default function ForgotPasswordView({ pushToast, onComplete }) {
               key={number}
               className={`grid h-5 w-5 place-items-center rounded-full border font-bold transition-all ${
                 step >= number
-                  ? "border-rose-500/60 bg-rose-500/15 text-rose-400 shadow-[0_0_10px_rgba(225,29,72,0.35)]"
+                  ? "border-rose-500/60 bg-rose-500/15 text-rose-400 shadow-[0_0_10px_rgba(255,255,255,0.35)]"
                   : "border-line text-zinc-600"
               }`}
             >

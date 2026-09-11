@@ -114,7 +114,7 @@ function StepIndicator({ current }) {
                   done
                     ? "border-emerald-500/50 bg-emerald-500/15 text-emerald-400"
                     : active
-                      ? "border-rose-500/60 bg-rose-500/15 text-white shadow-[0_0_18px_rgba(225,29,72,0.4)]"
+                      ? "border-rose-500/60 bg-rose-500/15 text-white shadow-[0_0_18px_rgba(255,255,255,0.4)]"
                       : "border-line bg-panel text-zinc-600"
                 }`}
               >
@@ -157,13 +157,13 @@ function TierCard({ selected, onSelect, tier }) {
       onClick={() => onSelect(tier.key)}
       className={`relative w-full rounded-2xl border p-6 text-left transition-all ${
         isActive
-          ? "border-rose-500/60 bg-gradient-to-b from-rose-500/10 to-transparent shadow-[0_0_30px_rgba(225,29,72,0.25)]"
+          ? "border-rose-500/60 bg-gradient-to-b from-rose-500/10 to-transparent shadow-[0_0_30px_rgba(255,255,255,0.25)]"
           : "border-line bg-panel/60 hover:border-rose-500/30"
       }`}
     >
       <span
         className={`absolute right-4 top-4 grid h-6 w-6 place-items-center rounded-full border-2 ${
-          isActive ? "border-rose-500 bg-rose-500 text-white" : "border-line"
+          isActive ? "border-rose-500 bg-rose-500 text-obsidian" : "border-line"
         }`}
       >
         {isActive && <Check size={12} strokeWidth={3} />}
@@ -320,7 +320,7 @@ export default function OnboardingPage() {
 
       <div className="relative mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
         <div className="flex flex-col items-center text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-rose-500/30 bg-rose-500/10 px-3.5 py-1.5 font-mono text-xs font-semibold uppercase tracking-widest text-rose-400 shadow-[0_0_18px_rgba(225,29,72,0.15)]">
+          <span className="inline-flex items-center gap-2 rounded-full border border-rose-500/30 bg-rose-500/10 px-3.5 py-1.5 font-mono text-xs font-semibold uppercase tracking-widest text-rose-400 shadow-[0_0_18px_rgba(255,255,255,0.15)]">
             <Sparkles size={13} />
             Paid Student Onboarding
           </span>
@@ -351,10 +351,10 @@ export default function OnboardingPage() {
                 transition={{ duration: 0.35 }}
                 className="mx-auto max-w-4xl"
               >
-                <div className="overflow-hidden rounded-3xl border border-line bg-panel/80 shadow-[0_0_60px_rgba(225,29,72,0.14)] backdrop-blur-2xl">
-                  <div className="border-b border-line bg-[#0c0c10] px-6 py-4 sm:px-10">
+                <div className="overflow-hidden rounded-3xl border border-line bg-panel/80 shadow-[0_0_60px_rgba(255,255,255,0.14)] backdrop-blur-2xl">
+                  <div className="border-b border-line bg-[#0e1629] px-6 py-4 sm:px-10">
                     <div className="flex items-center gap-3">
-                      <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-red-500 via-rose-600 to-red-900 shadow-[0_0_20px_rgba(225,29,72,0.5)]">
+                      <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-red-500 via-rose-600 to-red-900 shadow-[0_0_20px_rgba(255,255,255,0.5)]">
                         <ShieldCheck size={18} className="text-white" />
                       </span>
                       <div>
@@ -386,7 +386,7 @@ export default function OnboardingPage() {
                           }}
                         />
 
-                        <div className="rounded-2xl border border-line bg-[#0b0b0f]/60 p-5">
+                        <div className="rounded-2xl border border-line bg-[#0a1122]/60 p-5">
                           <p className="font-mono text-[10px] font-bold uppercase tracking-widest text-zinc-500">
                             What you unlock
                           </p>
@@ -426,7 +426,7 @@ export default function OnboardingPage() {
                               value={cardholder}
                               onChange={(e) => setCardholder(e.target.value)}
                               placeholder="Alex Rivera"
-                              className="mt-1.5 w-full rounded-xl border border-line bg-[#0b0b0f] px-4 py-3 text-sm text-white placeholder-zinc-700 outline-none transition-all focus:border-rose-500/60 focus:shadow-[0_0_0_3px_rgba(225,29,72,0.15)]"
+                              className="mt-1.5 w-full rounded-xl border border-line bg-[#0a1122] px-4 py-3 text-sm text-white placeholder-zinc-700 outline-none transition-all focus:border-rose-500/60 focus:shadow-[0_0_0_3px_rgba(255,255,255,0.15)]"
                             />
                           </label>
 
@@ -439,7 +439,7 @@ export default function OnboardingPage() {
                               value={email}
                               onChange={(e) => setEmail(e.target.value)}
                               placeholder="alex@devforge.dev"
-                              className="mt-1.5 w-full rounded-xl border border-line bg-[#0b0b0f] px-4 py-3 text-sm text-white placeholder-zinc-700 outline-none transition-all focus:border-rose-500/60 focus:shadow-[0_0_0_3px_rgba(225,29,72,0.15)]"
+                              className="mt-1.5 w-full rounded-xl border border-line bg-[#0a1122] px-4 py-3 text-sm text-white placeholder-zinc-700 outline-none transition-all focus:border-rose-500/60 focus:shadow-[0_0_0_3px_rgba(255,255,255,0.15)]"
                             />
                           </label>
 
@@ -452,7 +452,7 @@ export default function OnboardingPage() {
                               value={cardNumber}
                               onChange={(e) => setCardNumber(formatCard(e.target.value))}
                               placeholder="4242 4242 4242 4242"
-                              className="mt-1.5 w-full rounded-xl border border-line bg-[#0b0b0f] px-4 py-3 font-mono text-sm text-zinc-200 placeholder-zinc-700 outline-none transition-all focus:border-rose-500/60 focus:shadow-[0_0_0_3px_rgba(225,29,72,0.15)]"
+                              className="mt-1.5 w-full rounded-xl border border-line bg-[#0a1122] px-4 py-3 font-mono text-sm text-zinc-200 placeholder-zinc-700 outline-none transition-all focus:border-rose-500/60 focus:shadow-[0_0_0_3px_rgba(255,255,255,0.15)]"
                             />
                           </label>
 
@@ -466,7 +466,7 @@ export default function OnboardingPage() {
                                 value={expiry}
                                 onChange={(e) => setExpiry(formatExpiry(e.target.value))}
                                 placeholder="09 / 28"
-                                className="mt-1.5 w-full rounded-xl border border-line bg-[#0b0b0f] px-4 py-3 font-mono text-sm text-white placeholder-zinc-700 outline-none transition-all focus:border-rose-500/60 focus:shadow-[0_0_0_3px_rgba(225,29,72,0.15)]"
+                                className="mt-1.5 w-full rounded-xl border border-line bg-[#0a1122] px-4 py-3 font-mono text-sm text-white placeholder-zinc-700 outline-none transition-all focus:border-rose-500/60 focus:shadow-[0_0_0_3px_rgba(255,255,255,0.15)]"
                               />
                             </label>
                             <label className="block">
@@ -480,7 +480,7 @@ export default function OnboardingPage() {
                                   setCvc(String(e.target.value).replace(/\D/g, "").slice(0, 4))
                                 }
                                 placeholder="123"
-                                className="mt-1.5 w-full rounded-xl border border-line bg-[#0b0b0f] px-4 py-3 font-mono text-sm text-white placeholder-zinc-700 outline-none transition-all focus:border-rose-500/60 focus:shadow-[0_0_0_3px_rgba(225,29,72,0.15)]"
+                                className="mt-1.5 w-full rounded-xl border border-line bg-[#0a1122] px-4 py-3 font-mono text-sm text-white placeholder-zinc-700 outline-none transition-all focus:border-rose-500/60 focus:shadow-[0_0_0_3px_rgba(255,255,255,0.15)]"
                               />
                             </label>
                           </div>
@@ -503,7 +503,7 @@ export default function OnboardingPage() {
                           type="submit"
                           disabled={!cardReady || processing}
                           data-shift-onboard-pay
-                          className="group mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-6 py-3.5 text-sm font-bold text-white shadow-[0_0_22px_rgba(225,29,72,0.45)] transition-all hover:shadow-[0_0_36px_rgba(225,29,72,0.7)] disabled:cursor-wait disabled:opacity-50"
+                          className="group mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-6 py-3.5 text-sm font-bold text-obsidian shadow-[0_0_22px_rgba(255,255,255,0.45)] transition-all hover:shadow-[0_0_36px_rgba(255,255,255,0.7)] disabled:cursor-wait disabled:opacity-50"
                         >
                           {processing ? (
                             <>
@@ -539,10 +539,10 @@ export default function OnboardingPage() {
                 transition={{ duration: 0.35 }}
                 className="mx-auto max-w-4xl"
               >
-                <div className="overflow-hidden rounded-3xl border border-line bg-panel/80 shadow-[0_0_60px_rgba(225,29,72,0.14)] backdrop-blur-2xl">
-                  <div className="border-b border-line bg-[#0c0c10] px-6 py-4 sm:px-10">
+                <div className="overflow-hidden rounded-3xl border border-line bg-panel/80 shadow-[0_0_60px_rgba(255,255,255,0.14)] backdrop-blur-2xl">
+                  <div className="border-b border-line bg-[#0e1629] px-6 py-4 sm:px-10">
                     <div className="flex items-center gap-3">
-                      <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-red-500 via-rose-600 to-red-900 shadow-[0_0_20px_rgba(225,29,72,0.5)]">
+                      <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-red-500 via-rose-600 to-red-900 shadow-[0_0_20px_rgba(255,255,255,0.5)]">
                         <Lock size={18} className="text-white" />
                       </span>
                       <div>
@@ -582,7 +582,7 @@ export default function OnboardingPage() {
                             setAccountErrors((prev) => ({ ...prev, name: "" }));
                           }}
                           placeholder="Alex Rivera"
-                          className="mt-1.5 w-full rounded-xl border border-line bg-[#0b0b0f] px-4 py-3 text-sm text-white placeholder-zinc-700 outline-none transition-all focus:border-rose-500/60 focus:shadow-[0_0_0_3px_rgba(225,29,72,0.15)]"
+                          className="mt-1.5 w-full rounded-xl border border-line bg-[#0a1122] px-4 py-3 text-sm text-white placeholder-zinc-700 outline-none transition-all focus:border-rose-500/60 focus:shadow-[0_0_0_3px_rgba(255,255,255,0.15)]"
                         />
                         {accountErrors.name && (
                           <p className="mt-1.5 font-mono text-xs text-rose-400">{accountErrors.name}</p>
@@ -601,7 +601,7 @@ export default function OnboardingPage() {
                             setAccountErrors((prev) => ({ ...prev, email: "" }));
                           }}
                           placeholder="alex@devforge.dev"
-                          className="mt-1.5 w-full rounded-xl border border-line bg-[#0b0b0f] px-4 py-3 text-sm text-white placeholder-zinc-700 outline-none transition-all focus:border-rose-500/60 focus:shadow-[0_0_0_3px_rgba(225,29,72,0.15)]"
+                          className="mt-1.5 w-full rounded-xl border border-line bg-[#0a1122] px-4 py-3 text-sm text-white placeholder-zinc-700 outline-none transition-all focus:border-rose-500/60 focus:shadow-[0_0_0_3px_rgba(255,255,255,0.15)]"
                         />
                         {accountErrors.email && (
                           <p className="mt-1.5 font-mono text-xs text-rose-400">{accountErrors.email}</p>
@@ -622,7 +622,7 @@ export default function OnboardingPage() {
                             }}
                             placeholder="Create a strong password"
                             autoComplete="new-password"
-                            className="mt-1.5 w-full rounded-xl border border-line bg-[#0b0b0f] px-4 py-3 text-sm text-white placeholder-zinc-700 outline-none transition-all focus:border-rose-500/60 focus:shadow-[0_0_0_3px_rgba(225,29,72,0.15)]"
+                            className="mt-1.5 w-full rounded-xl border border-line bg-[#0a1122] px-4 py-3 text-sm text-white placeholder-zinc-700 outline-none transition-all focus:border-rose-500/60 focus:shadow-[0_0_0_3px_rgba(255,255,255,0.15)]"
                           />
                           {accountErrors.password && (
                             <p className="mt-1.5 font-mono text-xs text-rose-400">{accountErrors.password}</p>
@@ -642,7 +642,7 @@ export default function OnboardingPage() {
                             }}
                             placeholder="Repeat your password"
                             autoComplete="new-password"
-                            className="mt-1.5 w-full rounded-xl border border-line bg-[#0b0b0f] px-4 py-3 text-sm text-white placeholder-zinc-700 outline-none transition-all focus:border-rose-500/60 focus:shadow-[0_0_0_3px_rgba(225,29,72,0.15)]"
+                            className="mt-1.5 w-full rounded-xl border border-line bg-[#0a1122] px-4 py-3 text-sm text-white placeholder-zinc-700 outline-none transition-all focus:border-rose-500/60 focus:shadow-[0_0_0_3px_rgba(255,255,255,0.15)]"
                           />
                           {accountErrors.confirm && (
                             <p className="mt-1.5 font-mono text-xs text-rose-400">{accountErrors.confirm}</p>
@@ -661,7 +661,7 @@ export default function OnboardingPage() {
                         <button
                           type="submit"
                           disabled={creatingAccount}
-                          className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-6 py-3 text-sm font-bold text-white shadow-[0_0_22px_rgba(225,29,72,0.45)] transition-all hover:shadow-[0_0_36px_rgba(225,29,72,0.7)] disabled:cursor-wait disabled:opacity-50"
+                          className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-6 py-3 text-sm font-bold text-obsidian shadow-[0_0_22px_rgba(255,255,255,0.45)] transition-all hover:shadow-[0_0_36px_rgba(255,255,255,0.7)] disabled:cursor-wait disabled:opacity-50"
                         >
                           {creatingAccount ? (
                             <>
@@ -692,10 +692,10 @@ export default function OnboardingPage() {
                 transition={{ duration: 0.35 }}
                 className="mx-auto max-w-4xl"
               >
-                <div className="overflow-hidden rounded-3xl border border-line bg-panel/80 shadow-[0_0_60px_rgba(225,29,72,0.14)] backdrop-blur-2xl">
-                  <div className="border-b border-line bg-[#0c0c10] px-6 py-4 sm:px-10">
+                <div className="overflow-hidden rounded-3xl border border-line bg-panel/80 shadow-[0_0_60px_rgba(255,255,255,0.14)] backdrop-blur-2xl">
+                  <div className="border-b border-line bg-[#0e1629] px-6 py-4 sm:px-10">
                     <div className="flex items-center gap-3">
-                      <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-red-500 via-rose-600 to-red-900 shadow-[0_0_20px_rgba(225,29,72,0.5)]">
+                      <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-red-500 via-rose-600 to-red-900 shadow-[0_0_20px_rgba(255,255,255,0.5)]">
                         <Target size={18} className="text-white" />
                       </span>
                       <div>
@@ -724,7 +724,7 @@ export default function OnboardingPage() {
                             onClick={() => setTrackKey(t.key)}
                             className={`rounded-2xl border p-5 text-left transition-all ${
                               activeTrack
-                                ? "border-rose-500/60 bg-rose-500/10 shadow-[0_0_24px_rgba(225,29,72,0.2)]"
+                                ? "border-rose-500/60 bg-rose-500/10 shadow-[0_0_24px_rgba(255,255,255,0.2)]"
                                 : "border-line bg-white/[0.02] hover:border-rose-500/30 hover:bg-white/[0.04]"
                             }`}
                           >
@@ -762,7 +762,7 @@ export default function OnboardingPage() {
                             onClick={() => setCommitment(c.key)}
                             className={`rounded-2xl border p-5 text-left transition-all ${
                               activeC
-                                ? "border-rose-500/60 bg-rose-500/10 shadow-[0_0_24px_rgba(225,29,72,0.2)]"
+                                ? "border-rose-500/60 bg-rose-500/10 shadow-[0_0_24px_rgba(255,255,255,0.2)]"
                                 : "border-line bg-white/[0.02] hover:border-rose-500/30"
                             }`}
                           >
@@ -791,7 +791,7 @@ export default function OnboardingPage() {
                         type="button"
                         data-shift-onboard-track={trackKey}
                         onClick={() => setStep(4)}
-                        className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-6 py-3 text-sm font-bold text-white shadow-[0_0_22px_rgba(225,29,72,0.45)] transition-all hover:shadow-[0_0_36px_rgba(225,29,72,0.7)]"
+                        className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-6 py-3 text-sm font-bold text-obsidian shadow-[0_0_22px_rgba(255,255,255,0.45)] transition-all hover:shadow-[0_0_36px_rgba(255,255,255,0.7)]"
                       >
                         Review my plan
                         <ChevronRight size={15} className="transition-transform group-hover:translate-x-0.5" />
@@ -811,7 +811,7 @@ export default function OnboardingPage() {
                 transition={{ duration: 0.35 }}
                 className="mx-auto max-w-3xl"
               >
-                <div className="overflow-hidden rounded-3xl border border-rose-500/40 bg-panel/80 text-center shadow-[0_0_70px_rgba(225,29,72,0.22)] backdrop-blur-2xl">
+                <div className="overflow-hidden rounded-3xl border border-rose-500/40 bg-panel/80 text-center shadow-[0_0_70px_rgba(255,255,255,0.22)] backdrop-blur-2xl">
                   <div className="relative px-6 py-12 sm:px-12">
                     <motion.div
                       initial={{ scale: 0.6, opacity: 0 }}
@@ -861,7 +861,7 @@ export default function OnboardingPage() {
                         href="/dashboard"
                         data-shift-onboard-finish
                         onClick={finish}
-                        className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-7 py-3.5 text-sm font-bold text-white shadow-[0_0_26px_rgba(225,29,72,0.5)] transition-all hover:shadow-[0_0_42px_rgba(225,29,72,0.75)]"
+                        className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-7 py-3.5 text-sm font-bold text-obsidian shadow-[0_0_26px_rgba(255,255,255,0.5)] transition-all hover:shadow-[0_0_42px_rgba(255,255,255,0.75)]"
                       >
                         Enter Student Dashboard
                         <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />

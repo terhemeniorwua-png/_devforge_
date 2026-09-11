@@ -62,13 +62,13 @@ export default function Features() {
         <div className="mt-14 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
           {FEATURES.map((feature, index) => (
             <Reveal key={feature.number} delay={index * 120}>
-              <div className="group relative h-full overflow-hidden rounded-2xl border border-line bg-panel p-6 transition-all duration-300 hover:border-rose-500/50 hover:shadow-[0_0_40px_rgba(225,29,72,0.28)] hover:-translate-y-1.5">
+              <div className="group relative h-full overflow-hidden rounded-2xl border border-line bg-panel p-6 transition-all duration-300 hover:border-rose-500/50 hover:shadow-[0_0_40px_rgba(255,255,255,0.28)] hover:-translate-y-1.5">
                 <div
                   className={`pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-gradient-to-br ${feature.accent} opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-30`}
                 />
                 <div className="flex items-start justify-between">
                   <span
-                    className={`grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br ${feature.accent} text-white shadow-[0_0_22px_rgba(225,29,72,0.4)] transition-transform duration-300 group-hover:scale-110`}
+                    className={`grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br ${feature.accent} text-obsidian shadow-[0_0_22px_rgba(255,255,255,0.4)] transition-transform duration-300 group-hover:scale-110`}
                   >
                     <feature.icon size={22} />
                   </span>
@@ -84,7 +84,7 @@ export default function Features() {
                   {feature.description}
                 </p>
 
-                <div className="mt-5 rounded-lg border border-line bg-[#0a0a0e] px-3 py-2 font-mono text-[11px] text-zinc-500">
+                <div className="mt-5 rounded-lg border border-line bg-[#0a1121] px-3 py-2 font-mono text-[11px] text-zinc-500">
                   <span className="text-rose-400">{feature.hint}</span>
                 </div>
               </div>

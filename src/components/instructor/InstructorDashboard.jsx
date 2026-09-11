@@ -39,8 +39,8 @@ const CUSTOM_QUESTIONS_KEY = "devforge_custom_questions";
 const PRIORITY_STYLES = {
   blocker: {
     label: "System Blocker",
-    badge: "border-red-500/60 bg-red-600/15 text-red-300 shadow-[0_0_16px_rgba(225,29,72,0.4)]",
-    row: "border-red-500/50 shadow-[0_0_20px_rgba(225,29,72,0.25)]",
+    badge: "border-red-500/60 bg-red-600/15 text-red-300 shadow-[0_0_16px_rgba(255,255,255,0.4)]",
+    row: "border-red-500/50 shadow-[0_0_20px_rgba(255,255,255,0.25)]",
     dot: "bg-red-500 animate-pulse-glow",
   },
   urgent: {
@@ -98,7 +98,7 @@ function timeAgo(iso) {
 
 function CodeView({ code, filename, lang }) {
   return (
-    <div className="overflow-hidden rounded-xl border border-line bg-[#0b0b0f]">
+    <div className="overflow-hidden rounded-xl border border-line bg-[#0a1122]">
       <div className="flex items-center gap-1.5 border-b border-line bg-white/[0.03] px-3 py-2">
         <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
         <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
@@ -108,7 +108,7 @@ function CodeView({ code, filename, lang }) {
         </span>
       </div>
       <div className="grid grid-cols-[2.5rem_1fr]">
-        <div className="select-none border-r border-line bg-[#0a0a0e] py-4 text-right font-mono text-[12px] leading-6 text-zinc-700">
+        <div className="select-none border-r border-line bg-[#0a1121] py-4 text-right font-mono text-[12px] leading-6 text-zinc-700">
           {String(code || "").split("\n").map((_, i) => (
             <div key={i} className="pr-3">{i + 1}</div>
           ))}
@@ -193,9 +193,9 @@ function AddQuestionModal({ open, onClose, onSaved }) {
           exit={{ opacity: 0, scale: 0.96, y: 18 }}
           transition={{ duration: 0.25 }}
           onClick={(e) => e.stopPropagation()}
-          className="relative w-full max-w-2xl overflow-hidden rounded-3xl border border-line bg-panel shadow-[0_0_60px_rgba(225,29,72,0.2)]"
+          className="relative w-full max-w-2xl overflow-hidden rounded-3xl border border-line bg-panel shadow-[0_0_60px_rgba(255,255,255,0.2)]"
         >
-          <div className="flex items-center justify-between border-b border-line bg-[#0c0c10] px-5 py-4">
+          <div className="flex items-center justify-between border-b border-line bg-[#0e1629] px-5 py-4">
             <div className="flex items-center gap-2.5">
               <span className="grid h-9 w-9 place-items-center rounded-lg bg-rose-500/15 text-rose-400 ring-1 ring-rose-500/30">
                 <Plus size={18} />
@@ -225,7 +225,7 @@ function AddQuestionModal({ open, onClose, onSaved }) {
                 <select
                   value={track}
                   onChange={(e) => setTrack(e.target.value)}
-                  className="mt-1.5 w-full rounded-lg border border-line bg-[#0b0b0f] px-3 py-2.5 text-sm text-white outline-none transition-colors focus:border-rose-500/60"
+                  className="mt-1.5 w-full rounded-lg border border-line bg-[#0a1122] px-3 py-2.5 text-sm text-white outline-none transition-colors focus:border-rose-500/60"
                 >
                   <option>Frontend</option>
                   <option>Backend</option>
@@ -239,7 +239,7 @@ function AddQuestionModal({ open, onClose, onSaved }) {
                 <select
                   value={ecosystem}
                   onChange={(e) => setEcosystem(e.target.value)}
-                  className="mt-1.5 w-full rounded-lg border border-line bg-[#0b0b0f] px-3 py-2.5 text-sm text-white outline-none transition-colors focus:border-rose-500/60"
+                  className="mt-1.5 w-full rounded-lg border border-line bg-[#0a1122] px-3 py-2.5 text-sm text-white outline-none transition-colors focus:border-rose-500/60"
                 >
                   <option>Web2</option>
                   <option>Web3</option>
@@ -256,7 +256,7 @@ function AddQuestionModal({ open, onClose, onSaved }) {
                 onChange={(e) => setPrompt(e.target.value)}
                 rows={2}
                 placeholder="Which Anchor account constraint creates a new account on-chain?"
-                className="mt-1.5 w-full resize-none rounded-lg border border-line bg-[#0b0b0f] px-3 py-2.5 text-sm text-white placeholder-zinc-700 outline-none transition-colors focus:border-rose-500/60"
+                className="mt-1.5 w-full resize-none rounded-lg border border-line bg-[#0a1122] px-3 py-2.5 text-sm text-white placeholder-zinc-700 outline-none transition-colors focus:border-rose-500/60"
               />
             </label>
 
@@ -269,7 +269,7 @@ function AddQuestionModal({ open, onClose, onSaved }) {
                 onChange={(e) => setCode(e.target.value)}
                 rows={2}
                 placeholder="#[account(init, ____, space = ...)]"
-                className="mt-1.5 w-full resize-none rounded-lg border border-line bg-[#0b0b0f] px-3 py-2.5 font-mono text-[12.5px] leading-relaxed text-emerald-300/90 placeholder-zinc-700 outline-none transition-colors focus:border-rose-500/60"
+                className="mt-1.5 w-full resize-none rounded-lg border border-line bg-[#0a1122] px-3 py-2.5 font-mono text-[12.5px] leading-relaxed text-emerald-300/90 placeholder-zinc-700 outline-none transition-colors focus:border-rose-500/60"
               />
             </label>
 
@@ -299,7 +299,7 @@ function AddQuestionModal({ open, onClose, onSaved }) {
                         setOptions(next);
                       }}
                       placeholder={`Option ${["A", "B", "C", "D"][i]}`}
-                      className="w-full rounded-lg border border-line bg-[#0b0b0f] px-3 py-2.5 text-sm text-white placeholder-zinc-700 outline-none transition-colors focus:border-rose-500/60"
+                      className="w-full rounded-lg border border-line bg-[#0a1122] px-3 py-2.5 text-sm text-white placeholder-zinc-700 outline-none transition-colors focus:border-rose-500/60"
                     />
                   </div>
                 ))}
@@ -318,7 +318,7 @@ function AddQuestionModal({ open, onClose, onSaved }) {
                 onChange={(e) => setExplanation(e.target.value)}
                 rows={2}
                 placeholder="Explain why the correct option is right…"
-                className="mt-1.5 w-full resize-none rounded-lg border border-line bg-[#0b0b0f] px-3 py-2.5 text-sm text-white placeholder-zinc-700 outline-none transition-colors focus:border-rose-500/60"
+                className="mt-1.5 w-full resize-none rounded-lg border border-line bg-[#0a1122] px-3 py-2.5 text-sm text-white placeholder-zinc-700 outline-none transition-colors focus:border-rose-500/60"
               />
             </label>
 
@@ -329,7 +329,7 @@ function AddQuestionModal({ open, onClose, onSaved }) {
               <button
                 type="submit"
                 disabled={!canSave}
-                className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-5 py-3 text-sm font-bold text-white shadow-[0_0_18px_rgba(225,29,72,0.4)] transition-all hover:shadow-[0_0_30px_rgba(225,29,72,0.65)] disabled:cursor-not-allowed disabled:opacity-40"
+                className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-5 py-3 text-sm font-bold text-obsidian shadow-[0_0_18px_rgba(255,255,255,0.4)] transition-all hover:shadow-[0_0_30px_rgba(255,255,255,0.65)] disabled:cursor-not-allowed disabled:opacity-40"
               >
                 <Zap size={15} />
                 Publish to Quiz Hub
@@ -417,7 +417,7 @@ export default function InstructorDashboard() {
       <div className="relative mx-auto max-w-[1400px] px-4 py-14 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-center">
           <div className="flex items-center gap-4">
-            <span className="relative grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-red-500 via-rose-600 to-red-900 font-mono text-xl font-extrabold text-white shadow-[0_0_28px_rgba(225,29,72,0.55)]">
+            <span className="relative grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-red-500 via-rose-600 to-red-900 font-mono text-xl font-extrabold text-obsidian shadow-[0_0_28px_rgba(255,255,255,0.55)]">
               {MENTOR.avatarFallback}
               <span className="absolute -bottom-1 -right-1 grid h-6 w-6 place-items-center rounded-full border border-line bg-panel">
                 <BadgeCheck size={11} className="text-emerald-400" />
@@ -478,8 +478,8 @@ export default function InstructorDashboard() {
 
         <div className="mt-8 grid gap-6 xl:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
           <div className="space-y-6">
-            <div className="rounded-3xl border border-line bg-panel/70 shadow-[0_0_40px_rgba(225,29,72,0.1)] backdrop-blur">
-              <div className="flex items-center justify-between border-b border-line bg-[#0c0c10] px-5 py-4">
+            <div className="rounded-3xl border border-line bg-panel/70 shadow-[0_0_40px_rgba(255,255,255,0.1)] backdrop-blur">
+              <div className="flex items-center justify-between border-b border-line bg-[#0e1629] px-5 py-4">
                 <div className="flex items-center gap-2.5">
                   <span className="grid h-9 w-9 place-items-center rounded-lg bg-rose-500/15 text-rose-400 ring-1 ring-rose-500/30">
                     <LifeBuoy size={17} />
@@ -564,8 +564,8 @@ export default function InstructorDashboard() {
               )}
             </div>
 
-            <div className="rounded-3xl border border-line bg-panel/70 shadow-[0_0_40px_rgba(225,29,72,0.1)] backdrop-blur">
-              <div className="flex items-center justify-between border-b border-line bg-[#0c0c10] px-5 py-4">
+            <div className="rounded-3xl border border-line bg-panel/70 shadow-[0_0_40px_rgba(255,255,255,0.1)] backdrop-blur">
+              <div className="flex items-center justify-between border-b border-line bg-[#0e1629] px-5 py-4">
                 <div className="flex items-center gap-2.5">
                   <span className="grid h-9 w-9 place-items-center rounded-lg bg-rose-500/15 text-rose-400 ring-1 ring-rose-500/30">
                     <FileCode2 size={17} />
@@ -678,8 +678,8 @@ export default function InstructorDashboard() {
           </div>
 
           <div className="space-y-6">
-            <div className="rounded-3xl border border-line bg-panel/70 shadow-[0_0_40px_rgba(225,29,72,0.1)] backdrop-blur">
-              <div className="border-b border-line bg-[#0c0c10] px-5 py-4">
+            <div className="rounded-3xl border border-line bg-panel/70 shadow-[0_0_40px_rgba(255,255,255,0.1)] backdrop-blur">
+              <div className="border-b border-line bg-[#0e1629] px-5 py-4">
                 <div className="flex items-center gap-2.5">
                   <span className="grid h-9 w-9 place-items-center rounded-lg bg-rose-500/15 text-rose-400 ring-1 ring-rose-500/30">
                     <Gauge size={17} />
@@ -718,7 +718,7 @@ export default function InstructorDashboard() {
                     </span>
                   </div>
 
-                  <div className="rounded-xl border border-line bg-[#0a0a0e] p-4">
+                  <div className="rounded-xl border border-line bg-[#0a1121] p-4">
                     <p className="text-sm font-bold text-white">{selected.studentName}</p>
                     <p className="font-mono text-[11px] text-zinc-500">{selected.studentEmail}</p>
                     <div className="mt-3 flex flex-wrap gap-2">
@@ -781,7 +781,7 @@ export default function InstructorDashboard() {
                           onChange={(e) => setReply(e.target.value)}
                           rows={4}
                           placeholder="Walk the student through the fix, share a corrected sample, and point to the relevant module…"
-                          className="mt-1.5 w-full resize-none rounded-lg border border-line bg-[#0b0b0f] px-3 py-2.5 text-sm text-white placeholder-zinc-700 outline-none transition-colors focus:border-rose-500/60"
+                          className="mt-1.5 w-full resize-none rounded-lg border border-line bg-[#0a1122] px-3 py-2.5 text-sm text-white placeholder-zinc-700 outline-none transition-colors focus:border-rose-500/60"
                         />
                       </label>
                       <button
@@ -789,7 +789,7 @@ export default function InstructorDashboard() {
                         data-shift-ticket-resolve
                         disabled={!reply.trim()}
                         onClick={resolveTicket}
-                        className="group flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-5 py-3 text-sm font-bold text-white shadow-[0_0_18px_rgba(225,29,72,0.4)] transition-all hover:shadow-[0_0_30px_rgba(225,29,72,0.65)] disabled:cursor-not-allowed disabled:opacity-40"
+                        className="group flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-5 py-3 text-sm font-bold text-obsidian shadow-[0_0_18px_rgba(255,255,255,0.4)] transition-all hover:shadow-[0_0_30px_rgba(255,255,255,0.65)] disabled:cursor-not-allowed disabled:opacity-40"
                       >
                         <Send size={15} />
                         Resolve &amp; Reply to Student
@@ -800,8 +800,8 @@ export default function InstructorDashboard() {
               )}
             </div>
 
-            <div className="rounded-3xl border border-line bg-panel/70 shadow-[0_0_40px_rgba(225,29,72,0.1)] backdrop-blur">
-              <div className="flex items-center justify-between border-b border-line bg-[#0c0c10] px-5 py-4">
+            <div className="rounded-3xl border border-line bg-panel/70 shadow-[0_0_40px_rgba(255,255,255,0.1)] backdrop-blur">
+              <div className="flex items-center justify-between border-b border-line bg-[#0e1629] px-5 py-4">
                 <div className="flex items-center gap-2.5">
                   <span className="grid h-9 w-9 place-items-center rounded-lg bg-rose-500/15 text-rose-400 ring-1 ring-rose-500/30">
                     <BookOpen size={17} />
@@ -848,7 +848,7 @@ export default function InstructorDashboard() {
                     type="button"
                     data-shift-add-question
                     onClick={() => setQuestionOpen(true)}
-                    className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-5 py-3 text-sm font-bold text-white shadow-[0_0_18px_rgba(225,29,72,0.4)] transition-all hover:shadow-[0_0_30px_rgba(225,29,72,0.65)]"
+                    className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-5 py-3 text-sm font-bold text-obsidian shadow-[0_0_18px_rgba(255,255,255,0.4)] transition-all hover:shadow-[0_0_30px_rgba(255,255,255,0.65)]"
                   >
                     <Plus size={15} />
                     Add New Assessment Question
@@ -874,9 +874,9 @@ export default function InstructorDashboard() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.97, y: 18 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-3xl overflow-hidden rounded-3xl border border-line bg-panel shadow-[0_0_60px_rgba(225,29,72,0.2)]"
+              className="relative w-full max-w-3xl overflow-hidden rounded-3xl border border-line bg-panel shadow-[0_0_60px_rgba(255,255,255,0.2)]"
             >
-              <div className="flex items-center justify-between border-b border-line bg-[#0c0c10] px-5 py-4">
+              <div className="flex items-center justify-between border-b border-line bg-[#0e1629] px-5 py-4">
                 <div className="flex items-center gap-2.5">
                   <span className="grid h-9 w-9 place-items-center rounded-lg bg-rose-500/15 text-rose-400 ring-1 ring-rose-500/30">
                     <FileCode2 size={17} />
@@ -898,7 +898,7 @@ export default function InstructorDashboard() {
               </div>
               <div className="grid gap-4 p-5 sm:grid-cols-[220px_1fr]">
                 <div className="space-y-3">
-                  <div className="rounded-xl border border-line bg-[#0a0a0e] p-4">
+                  <div className="rounded-xl border border-line bg-[#0a1121] p-4">
                     <p className="text-sm font-bold text-white">{inspect.name}</p>
                     <p className="font-mono text-[11px] text-zinc-500">{inspect.course}</p>
                     <div className="mt-3">

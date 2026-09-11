@@ -43,7 +43,7 @@ export default function SignInView({
       >
         <div className="relative">
           <div className="pointer-events-none absolute -inset-2 rounded-full radial-crimson blur-xl" />
-          <div className="relative grid h-20 w-20 place-items-center rounded-2xl border border-rose-500/40 bg-gradient-to-br from-red-500/20 via-rose-600/15 to-red-900/20 font-mono text-2xl font-extrabold text-rose-300 shadow-[0_0_30px_rgba(225,29,72,0.35)]">
+          <div className="relative grid h-20 w-20 place-items-center rounded-2xl border border-rose-500/40 bg-gradient-to-br from-red-500/20 via-rose-600/15 to-red-900/20 font-mono text-2xl font-extrabold text-rose-300 shadow-[0_0_30px_rgba(255,255,255,0.35)]">
             {initials}
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function SignInView({
         <div className="mt-7 grid w-full grid-cols-2 gap-3">
           <Link
             href={dashboardHref}
-            className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-4 py-3 text-sm font-semibold text-white shadow-[0_0_22px_rgba(225,29,72,0.4)] transition-all hover:shadow-[0_0_34px_rgba(225,29,72,0.7)]"
+            className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-4 py-3 text-sm font-semibold text-obsidian shadow-[0_0_22px_rgba(255,255,255,0.4)] transition-all hover:shadow-[0_0_34px_rgba(255,255,255,0.7)]"
           >
             <Play size={15} />
             Continue Learning
@@ -138,12 +138,12 @@ export default function SignInView({
             <span
               className={`grid h-4 w-4 place-items-center rounded border transition-all ${
                 remember
-                  ? "border-rose-500 bg-rose-500/20 shadow-[0_0_10px_rgba(225,29,72,0.4)]"
-                  : "border-line bg-[#0a0a0f]"
+                  ? "border-rose-500 bg-rose-500/20 shadow-[0_0_10px_rgba(255,255,255,0.4)]"
+                  : "border-line bg-[#0a1122]"
               }`}
             >
               {remember && (
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fb7185" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M20 6 9 17l-5-5" />
                 </svg>
               )}
@@ -181,7 +181,7 @@ export default function SignInView({
         onGoogle={() => onSocialLogIn("google")}
       />
 
-      <p className="rounded-xl border border-line bg-[#0a0a0f] px-3.5 py-2.5 font-mono text-[11px] leading-relaxed text-zinc-500">
+      <p className="rounded-xl border border-line bg-[#0a1122] px-3.5 py-2.5 font-mono text-[11px] leading-relaxed text-zinc-500">
         <span className="text-rose-400">$</span> demo account —{" "}
         <span className="text-zinc-300">demo@devforge.dev</span> ·{" "}
         <span className="text-zinc-300">forge1234</span>

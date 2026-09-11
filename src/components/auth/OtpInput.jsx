@@ -92,12 +92,12 @@ export default function OtpInput({
           disabled={disabled}
           autoFocus={autoFocus && index === 0}
           aria-label={`OTP digit ${index + 1}`}
-          className={`h-12 w-full rounded-xl border bg-[#0a0a0f] text-center font-mono text-lg font-bold text-white outline-none transition-all duration-200 ${
+          className={`h-12 w-full rounded-xl border bg-[#0a1122] text-center font-mono text-lg font-bold text-white outline-none transition-all duration-200 ${
             error
-              ? "border-rose-600/70 shadow-[0_0_18px_rgba(225,29,72,0.25)]"
+              ? "border-rose-600/70 shadow-[0_0_18px_rgba(255,255,255,0.25)]"
               : value
-                ? "border-rose-500/60 shadow-[0_0_14px_rgba(225,29,72,0.18)]"
-                : "border-line focus:border-rose-500/60 focus:shadow-[0_0_0_3px_rgba(225,29,72,0.12)]"
+                ? "border-rose-500/60 shadow-[0_0_14px_rgba(255,255,255,0.18)]"
+                : "border-line focus:border-rose-500/60 focus:shadow-[0_0_0_3px_rgba(255,255,255,0.12)]"
           }`}
         />
       ))}

@@ -135,12 +135,12 @@ export default function SignUpView({ onRegistered, onGoSignIn }) {
           <span
             className={`mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded border transition-all ${
               tos
-                ? "border-rose-500 bg-rose-500/20 shadow-[0_0_10px_rgba(225,29,72,0.4)]"
-                : "border-line bg-[#0a0a0f]"
+                ? "border-rose-500 bg-rose-500/20 shadow-[0_0_10px_rgba(255,255,255,0.4)]"
+                : "border-line bg-[#0a1122]"
             }`}
           >
             {tos && (
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fb7185" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M20 6 9 17l-5-5" />
               </svg>
             )}

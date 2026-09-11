@@ -98,10 +98,10 @@ export default function RequestHelpModal({ open, onClose, onSubmitted, user }) {
           exit={{ opacity: 0, scale: 0.96, y: 18 }}
           transition={{ duration: 0.25 }}
           onClick={(e) => e.stopPropagation()}
-          className="relative w-full max-w-xl overflow-hidden rounded-3xl border border-line bg-panel shadow-[0_0_60px_rgba(225,29,72,0.2)]"
+          className="relative w-full max-w-xl overflow-hidden rounded-3xl border border-line bg-panel shadow-[0_0_60px_rgba(255,255,255,0.2)]"
           data-shift-help="modal"
         >
-          <div className="flex items-center justify-between border-b border-line bg-[#0c0c10] px-5 py-4">
+          <div className="flex items-center justify-between border-b border-line bg-[#0e1629] px-5 py-4">
             <div className="flex items-center gap-2.5">
               <span className="grid h-9 w-9 place-items-center rounded-lg bg-rose-500/15 text-rose-400 ring-1 ring-rose-500/30">
                 <LifeBuoy size={18} />
@@ -136,7 +136,7 @@ export default function RequestHelpModal({ open, onClose, onSubmitted, user }) {
                     setCourse(e.target.value);
                     setModule(HELP_MODULES[e.target.value][1]);
                   }}
-                  className="mt-1.5 w-full rounded-lg border border-line bg-[#0b0b0f] px-3 py-2.5 text-sm text-white outline-none transition-colors focus:border-rose-500/60"
+                  className="mt-1.5 w-full rounded-lg border border-line bg-[#0a1122] px-3 py-2.5 text-sm text-white outline-none transition-colors focus:border-rose-500/60"
                 >
                   {ACTIVE_COURSES.map((c) => (
                     <option key={c.id} value={c.title}>
@@ -153,7 +153,7 @@ export default function RequestHelpModal({ open, onClose, onSubmitted, user }) {
                   data-shift-help-module
                   value={module}
                   onChange={(e) => setModule(e.target.value)}
-                  className="mt-1.5 w-full rounded-lg border border-line bg-[#0b0b0f] px-3 py-2.5 text-sm text-white outline-none transition-colors focus:border-rose-500/60"
+                  className="mt-1.5 w-full rounded-lg border border-line bg-[#0a1122] px-3 py-2.5 text-sm text-white outline-none transition-colors focus:border-rose-500/60"
                 >
                   {(HELP_MODULES[course] || []).map((m) => (
                     <option key={m} value={m}>
@@ -178,7 +178,7 @@ export default function RequestHelpModal({ open, onClose, onSubmitted, user }) {
                     className={`rounded-xl border px-3 py-2.5 text-left transition-all ${
                       priority === p.key
                         ? p.key === "blocker"
-                          ? "border-red-500/60 bg-red-600/10 text-white shadow-[0_0_14px_rgba(225,29,72,0.3)]"
+                          ? "border-red-500/60 bg-red-600/10 text-white shadow-[0_0_14px_rgba(255,255,255,0.3)]"
                           : p.key === "urgent"
                             ? "border-amber-500/60 bg-amber-500/10 text-white shadow-[0_0_14px_rgba(245,158,11,0.2)]"
                             : "border-emerald-500/60 bg-emerald-500/10 text-white shadow-[0_0_14px_rgba(16,185,129,0.2)]"
@@ -202,7 +202,7 @@ export default function RequestHelpModal({ open, onClose, onSubmitted, user }) {
                 onChange={(e) => setSnippet(e.target.value)}
                 rows={3}
                 placeholder={'{"\n  token_program: ctx.accounts.token_program.toAccountInfo(),\n}'}
-                className="mt-1.5 w-full resize-none rounded-lg border border-line bg-[#0b0b0f] px-3 py-2.5 font-mono text-[12.5px] leading-relaxed text-emerald-300/90 placeholder-zinc-700 outline-none transition-colors focus:border-rose-500/60"
+                className="mt-1.5 w-full resize-none rounded-lg border border-line bg-[#0a1122] px-3 py-2.5 font-mono text-[12.5px] leading-relaxed text-emerald-300/90 placeholder-zinc-700 outline-none transition-colors focus:border-rose-500/60"
               />
             </label>
 
@@ -217,7 +217,7 @@ export default function RequestHelpModal({ open, onClose, onSubmitted, user }) {
                 rows={3}
                 required
                 placeholder="What are you trying to do, what error are you seeing, and what have you tried?"
-                className="mt-1.5 w-full resize-none rounded-lg border border-line bg-[#0b0b0f] px-3 py-2.5 text-sm leading-relaxed text-white placeholder-zinc-700 outline-none transition-colors focus:border-rose-500/60"
+                className="mt-1.5 w-full resize-none rounded-lg border border-line bg-[#0a1122] px-3 py-2.5 text-sm leading-relaxed text-white placeholder-zinc-700 outline-none transition-colors focus:border-rose-500/60"
               />
             </label>
 
@@ -225,7 +225,7 @@ export default function RequestHelpModal({ open, onClose, onSubmitted, user }) {
               <button
                 type="submit"
                 data-shift-help-submit
-                className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-5 py-3 text-sm font-bold text-white shadow-[0_0_18px_rgba(225,29,72,0.4)] transition-all hover:shadow-[0_0_30px_rgba(225,29,72,0.65)] hover:brightness-110"
+                className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-5 py-3 text-sm font-bold text-obsidian shadow-[0_0_18px_rgba(255,255,255,0.4)] transition-all hover:shadow-[0_0_30px_rgba(255,255,255,0.65)] hover:brightness-110"
               >
                 <AlertTriangle size={15} />
                 Submit Request

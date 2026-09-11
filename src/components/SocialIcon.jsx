@@ -79,7 +79,7 @@ export default function SocialIcon({ type, href, size = "md" }) {
       href={href}
       {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       title={label}
-      className={`inline-flex items-center justify-center rounded-full bg-white/5 text-zinc-400 ring-1 ring-line transition-all hover:bg-red-500/15 hover:text-rose-400 hover:ring-rose-500/50 hover:shadow-[0_0_16px_rgba(225,29,72,0.35)] ${containerClass} ${paddingClass}`}
+      className={`inline-flex items-center justify-center rounded-full bg-white/5 text-zinc-400 ring-1 ring-line transition-all hover:bg-red-500/15 hover:text-rose-400 hover:ring-rose-500/50 hover:shadow-[0_0_16px_rgba(255,255,255,0.35)] ${containerClass} ${paddingClass}`}
     >
       <Icon className={sizeClasses} />
     </a>

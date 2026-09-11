@@ -19,8 +19,8 @@ function EcosystemBadge({ ecosystem }) {
     <span
       className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 font-mono text-[10px] font-bold uppercase tracking-widest backdrop-blur-sm ${
         isWeb3
-          ? "bg-[#0b0b0f]/85 text-rose-400 ring-1 ring-rose-500/40"
-          : "bg-[#0b0b0f]/85 text-emerald-400 ring-1 ring-emerald-500/40"
+          ? "bg-[#0a1122]/85 text-rose-400 ring-1 ring-rose-500/40"
+          : "bg-[#0a1122]/85 text-emerald-400 ring-1 ring-emerald-500/40"
       }`}
     >
       <Globe2 size={10} />
@@ -47,9 +47,9 @@ function ResourceCard({ resource, onOpen }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-      className="group relative flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl border border-line bg-panel transition-all duration-300 hover:-translate-y-1.5 hover:border-rose-500/50 hover:shadow-[0_0_0_1px_rgba(225,29,72,0.3),0_0_38px_rgba(225,29,72,0.25)]"
+      className="group relative flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl border border-line bg-panel transition-all duration-300 hover:-translate-y-1.5 hover:border-rose-500/50 hover:shadow-[0_0_0_1px_rgba(255,255,255,0.3),0_0_38px_rgba(255,255,255,0.25)]"
     >
-      <div className="relative overflow-hidden border-b border-line bg-[#0b0b0f]">
+      <div className="relative overflow-hidden border-b border-line bg-[#0a1122]">
         <div className="flex items-center gap-1.5 px-3 py-2">
           <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f56]" />
           <span className="h-2.5 w-2.5 rounded-full bg-[#ffbd2e]" />
@@ -74,7 +74,7 @@ function ResourceCard({ resource, onOpen }) {
           className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-panel via-transparent to-transparent" />
-        <div className="absolute top-10 left-1/2 grid h-10 w-10 -translate-x-1/2 place-items-center rounded-full bg-[#0b0b0f]/75 text-rose-400 opacity-0 backdrop-blur transition-all duration-300 group-hover:opacity-100">
+        <div className="absolute top-10 left-1/2 grid h-10 w-10 -translate-x-1/2 place-items-center rounded-full bg-[#0a1122]/75 text-rose-400 opacity-0 backdrop-blur transition-all duration-300 group-hover:opacity-100">
           <Play size={16} className="ml-0.5 fill-rose-400" />
         </div>
         <div className="absolute bottom-3 right-3">
@@ -145,13 +145,13 @@ function DocsModal({ resource, onClose }) {
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: 24, scale: 0.98 }}
         transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-        className="flex w-full max-w-6xl flex-col overflow-hidden rounded-2xl border border-rose-500/30 bg-[#0b0b0f] shadow-[0_0_80px_rgba(225,29,72,0.3)]"
+        className="flex w-full max-w-6xl flex-col overflow-hidden rounded-2xl border border-rose-500/30 bg-[#0a1122] shadow-[0_0_80px_rgba(255,255,255,0.3)]"
       >
         <div className="flex items-center gap-2 border-b border-line bg-panel/80 px-3 py-2.5 sm:px-4">
           <span className="h-3 w-3 rounded-full bg-[#ff5f56]" />
           <span className="h-3 w-3 rounded-full bg-[#ffbd2e]" />
           <span className="h-3 w-3 rounded-full bg-[#27c93f]" />
-          <div className="ml-3 hidden flex-1 items-center gap-2 rounded-lg border border-line bg-[#0b0b0f] px-3 py-1.5 sm:flex">
+          <div className="ml-3 hidden flex-1 items-center gap-2 rounded-lg border border-line bg-[#0a1122] px-3 py-1.5 sm:flex">
             <ShieldCheck size={13} className="shrink-0 text-emerald-400" />
             <span className="truncate font-mono text-xs text-zinc-400">
               docs.devforge.io/sandbox/{resource.id}
@@ -173,7 +173,7 @@ function DocsModal({ resource, onClose }) {
             <button
               type="button"
               onClick={onClose}
-              className="inline-flex items-center gap-1.5 rounded-lg bg-gradient-to-r from-red-500 to-rose-700 px-3 py-1.5 font-mono text-xs font-bold text-white shadow-[0_0_16px_rgba(225,29,72,0.4)] transition-transform hover:scale-[1.03]"
+              className="inline-flex items-center gap-1.5 rounded-lg bg-gradient-to-r from-red-500 to-rose-700 px-3 py-1.5 font-mono text-xs font-bold text-obsidian shadow-[0_0_16px_rgba(255,255,255,0.4)] transition-transform hover:scale-[1.03]"
             >
               <X size={13} />
               Close (ESC)
@@ -200,7 +200,7 @@ function DocsModal({ resource, onClose }) {
               referrerPolicy="no-referrer"
               className="absolute inset-0 h-full w-full"
             />
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 flex items-center gap-2 border-t border-line bg-[#0b0b0f]/90 px-4 py-2 font-mono text-[10px] uppercase tracking-widest text-zinc-500 backdrop-blur">
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 flex items-center gap-2 border-t border-line bg-[#0a1122]/90 px-4 py-2 font-mono text-[10px] uppercase tracking-widest text-zinc-500 backdrop-blur">
               <ShieldCheck size={11} className="text-emerald-400" />
               secure sandbox · scripts + forms allowed · cross-origin isolated
             </div>
@@ -248,7 +248,7 @@ export default function DocsStore() {
 
       <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="flex flex-col items-center text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-rose-500/30 bg-rose-500/10 px-3.5 py-1.5 font-mono text-xs font-semibold uppercase tracking-widest text-rose-400 shadow-[0_0_18px_rgba(225,29,72,0.15)]">
+          <span className="inline-flex items-center gap-2 rounded-full border border-rose-500/30 bg-rose-500/10 px-3.5 py-1.5 font-mono text-xs font-semibold uppercase tracking-widest text-rose-400 shadow-[0_0_18px_rgba(255,255,255,0.15)]">
             <span className="h-1.5 w-1.5 animate-pulse-glow rounded-full bg-gradient-to-r from-red-500 to-rose-600" />
             Resource Vault
           </span>
@@ -281,7 +281,7 @@ export default function DocsStore() {
                   aria-pressed={isActive}
                   className={`relative rounded-xl px-4 py-2.5 text-sm font-semibold transition-all ${
                     isActive
-                      ? "bg-gradient-to-r from-red-500 via-rose-600 to-red-800 text-white shadow-[0_0_20px_rgba(225,29,72,0.45)]"
+                      ? "bg-gradient-to-r from-red-500 via-rose-600 to-red-800 text-obsidian shadow-[0_0_20px_rgba(255,255,255,0.45)]"
                       : "text-zinc-400 hover:bg-white/5 hover:text-white"
                   }`}
                 >
@@ -313,7 +313,7 @@ export default function DocsStore() {
             <button
               type="button"
               onClick={() => setEcosystem("all")}
-              className="mt-1 rounded-lg bg-gradient-to-r from-red-500 to-rose-700 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_0_18px_rgba(225,29,72,0.4)]"
+              className="mt-1 rounded-lg bg-gradient-to-r from-red-500 to-rose-700 px-5 py-2.5 text-sm font-semibold text-obsidian shadow-[0_0_18px_rgba(255,255,255,0.4)]"
             >
               Show All Ecosystems
             </button>

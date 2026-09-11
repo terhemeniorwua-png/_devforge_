@@ -19,7 +19,7 @@ const ECOSYSTEM_LINKS = [
 function Logo() {
   return (
     <Link href="/" className="group flex items-center gap-2.5 shrink-0">
-      <span className="relative grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-red-500 via-rose-600 to-red-900 shadow-[0_0_24px_rgba(225,29,72,0.5)] transition-shadow group-hover:shadow-[0_0_36px_rgba(225,29,72,0.75)]">
+      <span className="relative grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-red-500 via-rose-600 to-red-900 shadow-[0_0_24px_rgba(255,255,255,0.5)] transition-shadow group-hover:shadow-[0_0_36px_rgba(255,255,255,0.75)]">
         <span className="font-mono text-lg font-extrabold text-white">D</span>
         <span className="absolute -inset-0.5 -z-10 rounded-lg bg-red-500/40 blur-md" />
       </span>
@@ -52,7 +52,7 @@ function Dropdown({ label, items, onSelect }) {
         />
       </button>
       {open && (
-        <div className="absolute left-0 top-full z-50 mt-2 w-48 overflow-hidden rounded-xl border border-line bg-panel/95 p-1.5 shadow-[0_0_30px_rgba(0,0,0,0.6),0_0_18px_rgba(225,29,72,0.15)] backdrop-blur-md">
+        <div className="absolute left-0 top-full z-50 mt-2 w-48 overflow-hidden rounded-xl border border-line bg-panel/95 p-1.5 shadow-[0_0_30px_rgba(0,0,0,0.6),0_0_18px_rgba(255,255,255,0.15)] backdrop-blur-md">
           {items.map((item) => (
             <button
               key={item.label}
@@ -127,7 +127,7 @@ export default function Navbar() {
           </Link>
           <Link
             href="/start-learning"
-            className="group relative inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-4 py-2 text-sm font-semibold text-white shadow-[0_0_20px_rgba(225,29,72,0.4)] transition-all hover:shadow-[0_0_34px_rgba(225,29,72,0.7)] hover:brightness-110"
+            className="group relative inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-4 py-2 text-sm font-semibold text-obsidian shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all hover:shadow-[0_0_34px_rgba(255,255,255,0.7)] hover:brightness-110"
           >
             <Zap size={15} className="transition-transform group-hover:scale-125" />
             Start Learning
@@ -191,7 +191,7 @@ export default function Navbar() {
               <Link
                 href="/start-learning"
                 onClick={() => setMobileOpen(false)}
-                className="rounded-lg bg-gradient-to-r from-red-500 to-rose-700 px-4 py-2.5 text-center text-sm font-semibold text-white shadow-[0_0_20px_rgba(225,29,72,0.4)]"
+                className="rounded-lg bg-gradient-to-r from-red-500 to-rose-700 px-4 py-2.5 text-center text-sm font-semibold text-obsidian shadow-[0_0_20px_rgba(255,255,255,0.4)]"
               >
                 Start Learning
               </Link>

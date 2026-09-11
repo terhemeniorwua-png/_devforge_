@@ -48,14 +48,14 @@ function ToastStack({ toasts, onDismiss }) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, x: 120, scale: 0.95 }}
             transition={{ type: "spring", stiffness: 380, damping: 30 }}
-            className={`pointer-events-auto relative overflow-hidden rounded-2xl border p-4 shadow-[0_0_35px_rgba(225,29,72,0.25)] backdrop-blur-xl ${
+            className={`pointer-events-auto relative overflow-hidden rounded-2xl border p-4 shadow-[0_0_35px_rgba(255,255,255,0.25)] backdrop-blur-xl ${
               toast.variant === "security"
-                ? "border-rose-500/60 bg-[#0b0b0f]/95 shadow-[0_0_40px_rgba(225,29,72,0.4)]"
+                ? "border-rose-500/60 bg-[#0a1122]/95 shadow-[0_0_40px_rgba(255,255,255,0.4)]"
                 : toast.variant === "success"
-                  ? "border-emerald-500/40 bg-[#0b0b0f]/95"
+                  ? "border-emerald-500/40 bg-[#0a1122]/95"
                   : toast.variant === "error"
-                    ? "border-rose-600/50 bg-[#0b0b0f]/95"
-                    : "border-line bg-[#0b0b0f]/95"
+                    ? "border-rose-600/50 bg-[#0a1122]/95"
+                    : "border-line bg-[#0a1122]/95"
             }`}
           >
             <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-rose-500/70 to-transparent" />
@@ -63,7 +63,7 @@ function ToastStack({ toasts, onDismiss }) {
               <span
                 className={`mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg ${
                   toast.variant === "security"
-                    ? "bg-gradient-to-br from-red-500 to-red-900 text-white shadow-[0_0_16px_rgba(225,29,72,0.5)]"
+                    ? "bg-gradient-to-br from-red-500 to-red-900 text-obsidian shadow-[0_0_16px_rgba(255,255,255,0.5)]"
                     : toast.variant === "success"
                       ? "bg-emerald-500/15 text-emerald-400"
                       : toast.variant === "error"
@@ -223,7 +223,7 @@ export default function AuthClient() {
           href="/"
           className="group mb-5 inline-flex items-center gap-2 font-mono text-sm text-zinc-400 transition-colors hover:text-rose-400"
         >
-          <span className="grid h-8 w-8 place-items-center rounded-lg border border-line bg-panel/70 transition-all group-hover:border-rose-500/40 group-hover:shadow-[0_0_16px_rgba(225,29,72,0.3)]">
+          <span className="grid h-8 w-8 place-items-center rounded-lg border border-line bg-panel/70 transition-all group-hover:border-rose-500/40 group-hover:shadow-[0_0_16px_rgba(255,255,255,0.3)]">
             <ArrowLeft size={15} />
           </span>
           Back to Home
@@ -233,14 +233,14 @@ export default function AuthClient() {
           initial={{ opacity: 0, y: 22, scale: 0.985 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="relative overflow-hidden rounded-3xl border border-line bg-panel/80 shadow-[0_0_50px_rgba(225,29,72,0.16)] backdrop-blur-2xl"
+          className="relative overflow-hidden rounded-3xl border border-line bg-panel/80 shadow-[0_0_50px_rgba(255,255,255,0.16)] backdrop-blur-2xl"
         >
           <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-rose-500/70 to-transparent" />
           <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full radial-crimson blur-2xl" />
 
           <div className="relative px-6 pb-9 pt-8 sm:px-9">
             <div className="flex flex-col items-center text-center">
-              <span className="relative grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-red-500 via-rose-600 to-red-900 shadow-[0_0_26px_rgba(225,29,72,0.55)]">
+              <span className="relative grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-red-500 via-rose-600 to-red-900 shadow-[0_0_26px_rgba(255,255,255,0.55)]">
                 <span className="font-mono text-2xl font-extrabold text-white">D</span>
                 <span className="absolute -inset-1 -z-10 rounded-xl bg-rose-500/30 blur-md" />
               </span>
@@ -268,7 +268,7 @@ export default function AuthClient() {
                       <motion.span
                         layoutId="auth-role-pill"
                         transition={{ type: "spring", stiffness: 420, damping: 34 }}
-                        className="absolute inset-0 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 shadow-[0_0_20px_rgba(225,29,72,0.45)]"
+                        className="absolute inset-0 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 shadow-[0_0_20px_rgba(255,255,255,0.45)]"
                       />
                     )}
                     <span className="relative z-10 flex items-center justify-center gap-2 text-sm font-semibold">
@@ -303,7 +303,7 @@ export default function AuthClient() {
                       <motion.span
                         layoutId="auth-tab-pill"
                         transition={{ type: "spring", stiffness: 420, damping: 34 }}
-                        className="absolute inset-0 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 shadow-[0_0_20px_rgba(225,29,72,0.45)]"
+                        className="absolute inset-0 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 shadow-[0_0_20px_rgba(255,255,255,0.45)]"
                       />
                     )}
                     <span className="relative z-10">{item.label}</span>

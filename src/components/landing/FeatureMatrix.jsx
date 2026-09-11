@@ -108,8 +108,8 @@ export default function FeatureMatrix() {
           description="Try the full experience as a guest — then unlock automated grading, the AI tutor, and verifiable certifications when you're ready to forge."
         />
 
-        <Reveal delay={150} className="mt-12 overflow-hidden rounded-2xl border border-line bg-panel shadow-[0_0_50px_rgba(225,29,72,0.12)]">
-          <div className="grid grid-cols-[1.5fr_0.9fr_1.1fr] items-center border-b border-line bg-[#0c0c10] px-5 py-4 sm:px-7">
+        <Reveal delay={150} className="mt-12 overflow-hidden rounded-2xl border border-line bg-panel shadow-[0_0_50px_rgba(255,255,255,0.12)]">
+          <div className="grid grid-cols-[1.5fr_0.9fr_1.1fr] items-center border-b border-line bg-[#0e1629] px-5 py-4 sm:px-7">
             <span className="text-sm font-semibold uppercase tracking-widest text-zinc-500">
               Capabilities
             </span>

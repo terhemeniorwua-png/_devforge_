@@ -69,7 +69,7 @@ function countFor(pool, mode, selection) {
 
 function CodeBlock({ code }) {
   return (
-    <pre className="overflow-x-auto rounded-xl border border-line bg-[#0b0b0f] p-4 font-mono text-[13px] leading-relaxed text-zinc-300 shadow-[inset_0_0_20px_rgba(225,29,72,0.05)]">
+    <pre className="overflow-x-auto rounded-xl border border-line bg-[#0a1122] p-4 font-mono text-[13px] leading-relaxed text-zinc-300 shadow-[inset_0_0_20px_rgba(255,255,255,0.05)]">
       <span className="mr-2 select-none text-rose-500">&gt;</span>
       {code}
     </pre>
@@ -156,7 +156,7 @@ function OptionButton({ option, state, onClick, disabled, optionIndex }) {
       base +
       " border-emerald-500/70 bg-emerald-500/10 text-emerald-200 shadow-[0_0_22px_rgba(16,185,129,0.25)]";
     marker = (
-      <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-emerald-500 text-[#050507]">
+      <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-emerald-500 text-[#060b1c]">
         <Check size={12} strokeWidth={3} />
       </span>
     );
@@ -165,7 +165,7 @@ function OptionButton({ option, state, onClick, disabled, optionIndex }) {
       base +
       " border-red-600/70 bg-red-600/10 text-red-200 shadow-[0_0_22px_rgba(220,38,38,0.25)]";
     marker = (
-      <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-red-600 text-white">
+      <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-red-600 text-obsidian">
         <X size={12} strokeWidth={3} />
       </span>
     );
@@ -395,7 +395,7 @@ export default function QuizHub() {
 
       <div className="relative mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="flex flex-col items-center text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-rose-500/30 bg-rose-500/10 px-3.5 py-1.5 font-mono text-xs font-semibold uppercase tracking-widest text-rose-400 shadow-[0_0_18px_rgba(225,29,72,0.15)]">
+          <span className="inline-flex items-center gap-2 rounded-full border border-rose-500/30 bg-rose-500/10 px-3.5 py-1.5 font-mono text-xs font-semibold uppercase tracking-widest text-rose-400 shadow-[0_0_18px_rgba(255,255,255,0.15)]">
             <span className="h-1.5 w-1.5 animate-pulse-glow rounded-full bg-gradient-to-r from-red-500 to-rose-600" />
             Ecosystem Quiz Hub
           </span>
@@ -421,10 +421,10 @@ export default function QuizHub() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -16 }}
                 transition={{ duration: 0.3 }}
-                className="mx-auto max-w-3xl rounded-3xl border border-line bg-panel/80 p-6 shadow-[0_0_50px_rgba(225,29,72,0.14)] backdrop-blur-2xl sm:p-10"
+                className="mx-auto max-w-3xl rounded-3xl border border-line bg-panel/80 p-6 shadow-[0_0_50px_rgba(255,255,255,0.14)] backdrop-blur-2xl sm:p-10"
               >
                 <div className="flex flex-col items-center text-center">
-                  <span className="grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-red-500 via-rose-600 to-red-900 shadow-[0_0_28px_rgba(225,29,72,0.55)]">
+                  <span className="grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-red-500 via-rose-600 to-red-900 shadow-[0_0_28px_rgba(255,255,255,0.55)]">
                     <Target size={26} className="text-white" />
                   </span>
                   <h2 className="mt-4 text-2xl font-bold text-white">
@@ -444,7 +444,7 @@ export default function QuizHub() {
                       onClick={() => setMode(m.key)}
                       className={`rounded-xl border px-4 py-3 text-sm font-semibold transition-all ${
                         mode === m.key
-                          ? "border-rose-500/60 bg-rose-500/10 text-white shadow-[0_0_18px_rgba(225,29,72,0.25)]"
+                          ? "border-rose-500/60 bg-rose-500/10 text-white shadow-[0_0_18px_rgba(255,255,255,0.25)]"
                           : "border-line text-zinc-400 hover:bg-white/5"
                       }`}
                     >
@@ -467,7 +467,7 @@ export default function QuizHub() {
                         onClick={() => setTimerDuration(opt.value)}
                         className={`rounded-xl border px-4 py-3 text-left transition-all ${
                           active
-                            ? "border-rose-500/60 bg-rose-500/10 shadow-[0_0_18px_rgba(225,29,72,0.25)]"
+                            ? "border-rose-500/60 bg-rose-500/10 shadow-[0_0_18px_rgba(255,255,255,0.25)]"
                             : "border-line bg-white/[0.03] hover:border-rose-500/40"
                         }`}
                       >
@@ -497,7 +497,7 @@ export default function QuizHub() {
                         onClick={() => setSelection(opt.key)}
                         className={`flex w-full items-center justify-between rounded-xl border px-4 py-3.5 text-left transition-all ${
                           active
-                            ? "border-rose-500/60 bg-rose-500/10 shadow-[0_0_18px_rgba(225,29,72,0.2)]"
+                            ? "border-rose-500/60 bg-rose-500/10 shadow-[0_0_18px_rgba(255,255,255,0.2)]"
                             : "border-line bg-white/[0.03] hover:border-rose-500/40"
                         }`}
                       >
@@ -511,7 +511,7 @@ export default function QuizHub() {
                           </span>
                           <span
                             className={`grid h-6 w-6 place-items-center rounded-full border-2 ${
-                              active ? "border-rose-500 bg-rose-500 text-white" : "border-line"
+                              active ? "border-rose-500 bg-rose-500 text-obsidian" : "border-line"
                             }`}
                           >
                             {active && <Check size={12} strokeWidth={3} />}
@@ -526,7 +526,7 @@ export default function QuizHub() {
                   type="button"
                   data-shift-timer-value={String(timerDuration)}
                   onClick={startAssessment}
-                  className="group mt-8 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-6 py-4 text-base font-bold text-white shadow-[0_0_26px_rgba(225,29,72,0.45)] transition-all hover:shadow-[0_0_40px_rgba(225,29,72,0.7)] hover:brightness-110"
+                  className="group mt-8 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-6 py-4 text-base font-bold text-obsidian shadow-[0_0_26px_rgba(255,255,255,0.45)] transition-all hover:shadow-[0_0_40px_rgba(255,255,255,0.7)] hover:brightness-110"
                 >
                   <Zap size={18} className="transition-transform group-hover:scale-125" />
                   Start Assessment
@@ -565,7 +565,7 @@ export default function QuizHub() {
                   )}
                 </div>
 
-                <div className="mt-6 rounded-3xl border border-line bg-panel/80 p-6 shadow-[0_0_50px_rgba(225,29,72,0.12)] backdrop-blur-2xl sm:p-8">
+                <div className="mt-6 rounded-3xl border border-line bg-panel/80 p-6 shadow-[0_0_50px_rgba(255,255,255,0.12)] backdrop-blur-2xl sm:p-8">
                   <div className="flex items-center justify-between gap-3">
                     <span className="rounded-full bg-rose-500/10 px-3 py-1 font-mono text-[11px] font-bold uppercase tracking-widest text-rose-400 ring-1 ring-rose-500/25">
                       Question {index + 1} / {questions.length}
@@ -639,7 +639,7 @@ export default function QuizHub() {
                         <button
                           type="button"
                           onClick={nextQuestion}
-                          className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-5 py-3 text-sm font-bold text-white shadow-[0_0_18px_rgba(225,29,72,0.4)] transition-all hover:shadow-[0_0_30px_rgba(225,29,72,0.6)]"
+                          className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-5 py-3 text-sm font-bold text-obsidian shadow-[0_0_18px_rgba(255,255,255,0.4)] transition-all hover:shadow-[0_0_30px_rgba(255,255,255,0.6)]"
                         >
                           {index + 1 >= questions.length ? "View Results" : "Next Question"}
                           <ChevronRight size={15} />
@@ -658,10 +658,10 @@ export default function QuizHub() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -16 }}
                 transition={{ duration: 0.32 }}
-                className="mx-auto max-w-3xl rounded-3xl border border-line bg-panel/80 p-6 shadow-[0_0_50px_rgba(225,29,72,0.14)] backdrop-blur-2xl sm:p-10"
+                className="mx-auto max-w-3xl rounded-3xl border border-line bg-panel/80 p-6 shadow-[0_0_50px_rgba(255,255,255,0.14)] backdrop-blur-2xl sm:p-10"
               >
                 <div className="flex flex-col items-center text-center">
-                  <span className="grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-red-500 via-rose-600 to-red-900 shadow-[0_0_34px_rgba(225,29,72,0.6)]">
+                  <span className="grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-red-500 via-rose-600 to-red-900 shadow-[0_0_34px_rgba(255,255,255,0.6)]">
                     <Trophy size={28} className="text-white" />
                   </span>
                   <h2 className="mt-5 text-3xl font-bold text-white">
@@ -731,7 +731,7 @@ export default function QuizHub() {
                   <button
                     type="button"
                     onClick={retake}
-                    className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-6 py-3.5 text-sm font-bold text-white shadow-[0_0_22px_rgba(225,29,72,0.4)] transition-all hover:shadow-[0_0_36px_rgba(225,29,72,0.6)]"
+                    className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-red-500 via-rose-600 to-red-800 px-6 py-3.5 text-sm font-bold text-obsidian shadow-[0_0_22px_rgba(255,255,255,0.4)] transition-all hover:shadow-[0_0_36px_rgba(255,255,255,0.6)]"
                   >
                     <RotateCcw size={16} />
                     Reconfigure &amp; Run New Mix
